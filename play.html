@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDS Spelmodus - Latijnisfijn</title>
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="timer-controls">
+                <label>
+                    <input type="checkbox" id="show-timer" checked> Toon timer
+                </label>
+                <div id="timer">03:00</div>
+            </div>
+            <div class="score-display">
+                Juist: <span id="correct-count">0</span> | 
+                Fout: <span id="wrong-count">0</span>
+            </div>
+        </div>
+
+        <div id="cards-container" class="cards"></div>
+
+        <div class="game-controls">
+            <button id="correct" class="score-btn correct">Juist (C)</button>
+            <button id="wrong" class="score-btn wrong">Fout (F)</button>
+            <button id="skip" class="score-btn unsure">Sla over (N)</button>
+        </div>
+
+        <div id="score-modal" class="modal">
+            <div class="modal-content">
+                <h2>Tijd is om! 🎉</h2>
+                <div class="score-stats">
+                    <p>Totale kaarten: <span id="total-cards">0</span></p>
+                    <p>Juiste antwoorden: <span id="final-correct">0</span></p>
+                    <p>Foute antwoorden: <span id="final-wrong">0</span></p>
+                </div>
+                <button id="restart-game" class="btn">Opnieuw spelen</button>
+                <a href="/" class="btn">Terug naar oefenen</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="play.js"></script>
+</body>
+</html>
